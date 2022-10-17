@@ -26,11 +26,11 @@ class Topic extends CI_Controller {
 	}
 
 	function write(){
-		if (empty($_REQUEST) === false) {
+		if (empty($_POST) === false) {
 			$result = $this->topic_model->insert(
 				array(
-					'title'=> $_REQUEST['title'],
-					'description'=> $_REQUEST['description']
+					'title'=> $_POST['title'],
+					'description'=> $_POST['description']
 				)
 			);
 
